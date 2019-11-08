@@ -11,7 +11,8 @@ namespace FAQApi.Database
     public class FAQContext :DbContext
     {
 
-        public DbSet<Comment> comments { get; set; }
+        public DbSet<Question> questions { get; set; }
+        public DbSet<Answer> answers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -8,14 +8,14 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FAQApi.Model
 {
-    public class Comment
+    public class Answer
     {
         
         [Key]
-        public int comment_id { get; set; }
-        public string comment_body { get; set; }
-        public Comment? comment_parent { get; set; }
-        public ICollection<Comment> comment_children { get; set; }
+        public int answer_id { get; set; }
+        public string answer_body { get; set; }
+        public Question? answer_parent { get; set; }
+       
 
 
     }
