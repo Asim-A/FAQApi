@@ -8,15 +8,19 @@ using FAQApi.Model;
 
 namespace FAQApi.Database
 {
-    public class FAQContext :DbContext
+    public class FAQContext : DbContext
     {
+        public FAQContext(DbContextOptions<FAQContext> options) : base(options)
+        {
+            Database.EnsureCreated();
+        }
 
         public DbSet<Question> questions { get; set; }
         public DbSet<Answer> answers { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["FAQDatabase"].ConnectionString);
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["FAQDatabase"].ConnectionString);
+        //}
     }
 }
