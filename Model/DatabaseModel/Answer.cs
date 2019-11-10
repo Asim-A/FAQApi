@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace FAQApi.Model
+namespace FAQApi.Model.DatabaseModel
 {
     public class Answer
     {

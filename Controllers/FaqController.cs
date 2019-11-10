@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FAQApi.Database;
-using FAQApi.Model;
+using FAQApi.Model.DatabaseModel;
+using FAQApi.Model.DTOModel;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -11,8 +12,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace FAQApi.Controllers
 {
     [ApiController]
-    [Route("/api/[controller]")]
-    public class FaqController : ControllerBase
+    [Route("/v1/[controller]")]
+    public class FaqController : Controller
     {
         private readonly FAQContext context;
         public FaqController(FAQContext context)
@@ -35,15 +36,17 @@ namespace FAQApi.Controllers
 
             context.questions.Add(new Question
             {
-                question_id = 9999,
                 question_body = "TEST BODY"
             });
+
+            context.SaveChanges();
 
             return Enumerable.Range(0, questions.Length).Select(i => new Question { 
                 question_id = i,
                 question_body = questions[i]
             });
         }
+
 
         
 

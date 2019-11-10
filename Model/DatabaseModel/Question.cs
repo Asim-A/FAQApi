@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FAQApi.Model
+namespace FAQApi.Model.DatabaseModel
 {
     public class Question
     {

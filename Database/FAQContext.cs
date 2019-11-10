@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Configuration;
-using FAQApi.Model;
+using FAQApi.Model.DatabaseModel;
 
 namespace FAQApi.Database
 {
