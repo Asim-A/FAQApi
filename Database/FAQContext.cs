@@ -15,8 +15,12 @@ namespace FAQApi.Database
             Database.EnsureCreated();
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+        }
+
+        public DbSet<Category> categories { get; set; }
         public DbSet<Question> questions { get; set; }
-        public DbSet<Answer> answers { get; set; }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{

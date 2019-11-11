@@ -1,2 +1,2 @@
 ﻿TRUNCATE TABLE dbo.questions;
-TRUNCATE TABLE dbo.answers;
+TRUNCATE TABLE dbo.categories;
