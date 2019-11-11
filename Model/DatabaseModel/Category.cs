@@ -13,10 +13,6 @@ namespace FAQApi.Model.DatabaseModel
         public int category_id { get; set; }
         public string category_body { get; set; }
         public ICollection<Question> Questions { get; set; }
-
-        public static implicit operator Task<object>(Category v)
-        {
-            throw new NotImplementedException();
-        }
+           
     }
 }

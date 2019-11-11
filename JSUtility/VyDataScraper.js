@@ -1,7 +1,9 @@
 // Array av klasser "promotional-block" (div), alle de har en anchor med klasse "EPiLink" som inneholder href
 
 let promotional_divs = document.getElementsByClassName("promotion-block-text");
-let questions = [];
+let categories = [];
+
+const defaultLink = "https://www.vy.no/";
 
 for (var i = 0; i < promotional_divs.length; i++) {
   const anc = promotional_divs[i].getElementsByClassName("EPiLink")[0];
@@ -13,13 +15,24 @@ for (var i = 0; i < promotional_divs.length; i++) {
     question_link: href
   };
 
-  questions.push(question);
+  categories.push(question);
 }
 
-async function getQuestions() {
-  const response = fetch(
-    "https://www.vy.no/kundeservice/sporsmal-og-svar"
-  ).then(res => {
+let questions = [];
+
+for (var i = 0; i < categories.length; i++) {
+  const href = categories[i]["question_link"];
+  const link = defaultLink + href;
+
+  response_html = await getQuestions(link);
+
+  response_html = response_html.then();
+}
+
+async function getQuestions(url) {
+  const response = fetch(url).then(res => {
     return res.text();
   });
 }
+
+async function makeQuestions(html, question_array) {}
