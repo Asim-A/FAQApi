@@ -1,2 +1,2 @@
-﻿TRUNCATE TABLE dbo.questions;
-TRUNCATE TABLE dbo.categories;
+﻿DELETE FROM dbo.categories where category_id > 0;
+TRUNCATE TABLE dbo.questions;
