@@ -1,0 +1,33 @@
+[
+  {
+    "question": "Hvordan finner jeg ut om toget mitt er i rute?",
+    "answer": "<p><a title=\"Sjekk om toget ditt er i rute\" href=\"https://www.vy.no/trafikk-og-ruter/trafikkinfo\" target=\"_top\">Sjekk om toget ditt er i rute</a> her på vy.no, søk på avgangen i appen eller abonner på pushvarsling om avvik i appen. Ellers skal du også få beskjed på tavler og over høyttaler på stasjonen om eventuelle avvik. Personalet om bord skal også holde deg informert.</p>"
+  },
+  {
+    "question": "Hvordan finner jeg rutetidene?",
+    "answer": "<p>Du kan raskt og enkelt gjøre et rutesøk i <a title=\"reiseplanleggeren\" href=\"/kjop-billetter/togbilletter\" target=\"_top\">reiseplanleggeren</a> eller i appen. Du kan også finne rutetider i <a title=\"rutetabellene\" href=\"/trafikk-og-ruter/rutetider\" target=\"_top\">rutetabellene</a>.</p>"
+  },
+  {
+    "question": "Reisen min påvirkes av arbeider – hvor finner jeg mer informasjon?",
+    "answer": "<p><a title=\"Se informasjon om planlagte arbeider\" href=\"https://www.vy.no/trafikk-og-ruter/trafikkinfo\" target=\"_top\">Se informasjon om planlagte arbeider</a>.</p>\n<p>Informasjon om planlagte arbeider finnes også i <a title=\"reiseplanleggeren\" href=\"/kjop-billetter/togbilletter\" target=\"_top\">reiseplanleggeren</a> og i appen når du søker opp en avgang.</p>"
+  },
+  {
+    "question": "Hvordan kommer jeg meg til flyplassen?",
+    "answer": "<p>Du kan ta toget hyppig, raskt og rimelig til Oslo Lufthavn (Gardermoen), Trondheim Lufthavn (Værnes) og Torp Lufthavn (Sandefjord).</p>\n<p><a title=\"Les mer om tog til flyplassen\" href=\"/trafikk-og-ruter/stasjoner-og-linjekart/tog-og-buss-til-flyplassen\" target=\"_top\">Les mer om tog til flyplassen</a>.</p>\n<p>Du kan også ta bussen til Oslo Lufthavn og Trondheim Lufthavn. <a title=\"Se informasjon om flybusser på nettbuss.no\" href=\"https://www.nettbuss.no/flybuss/\" target=\"_blank\" rel=\"noopener\">Se informasjon om flybusser på nettbuss.no</a>.</p>"
+  },
+  {
+    "question": "Hvor finner jeg informasjon om stasjonene?",
+    "answer": "<p><a title=\"Se åpningstider og adresser for våre betjente stasjoner\" href=\"/trafikk-og-ruter/stasjoner-og-linjekart/stasjoner\" target=\"_top\">Se åpningstider og adresser for våre betjente stasjoner</a>. For øvrig informasjon om stasjoner, <a title=\"se stasjonsoversikten på banenor.no\" href=\"https://www.banenor.no/Jernbanen/Stasjonssok\" target=\"_blank\" rel=\"noopener\">se stasjonsoversikten på banenor.no</a>.</p>\n<p>For informasjon om stasjonene til Nettbuss, <a title=\"se rutetabeller på nettbuss.no\" href=\"https://www.nettbuss.no/rutetabeller/\" target=\"_blank\" rel=\"noopener\">se rutetabeller på nettbuss.no</a>.</p>"
+  },
+  {
+    "question": "Hvordan parkerer jeg ved stasjonen?",
+    "answer": "<p><a title=\"stasjoner på banenor.no\" href=\"https://www.banenor.no/Jernbanen/Stasjonssok\" target=\"_blank\" rel=\"noopener\">Se informasjon om stasjonen på banenor.no</a> – velg fanen «Parkering».</p>\n<p>Med periodebillett kan du parkere rimeligere på stasjoner med egne parkeringsplasser for pendlere. <a title=\"Les om pendlerparkering på banenor.no\" href=\"https://www.banenor.no/Jernbanen/pendlerparkering/\" target=\"_blank\" rel=\"noopener\">Les om pendlerparkering hos banenor.no</a>.</p>"
+  },
+  {
+    "question": "Hvorfor er det så fullt på toget?",
+    "answer": "<p>I rushtidene er alt vi har av tilgjengelig materiell i bruk. Vi forsøker å matche etterspørselen med «riktig» kapasitet så langt det lar seg gjøre, likevel er det ikke mulig å tilby sitteplasser til alle. Vi får stadig flere togsett levert fra fabrikk så på sikt øker det muligheten til å kjøre flere avganger med doble togsett.</p>\n<p>Det kan imidlertid være mange grunner til at et tog er veldig fullt. For eksempel om en tidligere avgang ble forsinket eller innstilt kan det føre til at neste tog vil ha flere passasjerer enn vanlig. Noen ganger kan det&nbsp;også være uforutsette hendelser som gjør at vi ikke kan kjøre med det planlagte antall togsett eller vogner. Da blir det ofte satt opp buss i tillegg til toget.</p>"
+  },
+  {
+    "answer": "<li data-v-2e64a7c0=\"\" class=\"item\"><a data-v-2e64a7c0=\"\" href=\"/kundeservice/sporsmal-og-svar/billetter-og-setereservasjon\" class=\"EPiLink link animated-link\" target=\"_top\" rel=\"\">\n                    Billetter og setereservasjon\n                </a></li><li data-v-2e64a7c0=\"\" class=\"item\"><a data-v-2e64a7c0=\"\" href=\"/kundeservice/sporsmal-og-svar/endring-refusjon-og-kontrollgebyr\" class=\"EPiLink link animated-link\" target=\"_top\" rel=\"\">\n                    Endring, refusjon og kontrollgebyr\n                </a></li><li data-v-2e64a7c0=\"\" class=\"item\"><a data-v-2e64a7c0=\"\" href=\"/kundeservice/sporsmal-og-svar/bagasje-og-spesielle-behov\" class=\"EPiLink link animated-link\" target=\"_top\" rel=\"\">\n                    Bagasje og spesielle behov\n                </a></li><li data-v-2e64a7c0=\"\" class=\"item\"><a data-v-2e64a7c0=\"\" href=\"/kundeservice/sporsmal-og-svar/mat-om-bord\" class=\"EPiLink link animated-link\" target=\"_blank\" rel=\"noopener noreferrer\">\n                    Mat om bord\n                </a></li><li data-v-2e64a7c0=\"\" class=\"item\"><a data-v-2e64a7c0=\"\" href=\"/kundeservice/sporsmal-og-svar/apper-og-internett\" class=\"EPiLink link animated-link\" target=\"_top\" rel=\"\">\n                    Apper, internett og strømuttak\n                </a></li>"
+  }
+]

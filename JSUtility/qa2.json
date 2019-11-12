@@ -1,0 +1,37 @@
+[
+  {
+    "question": "Hvordan kan jeg endre eller refundere billetten?",
+    "answer": "<p>Hvis du har enkeltbillett og vil endre eller refundere billetten din, så kan du gjøre det gratis frem til 24 timer før avgang. Ved mindre enn 24 timer før avgang må du betale et gebyr. Miniprisbilletter kan ikke endres eller refunderes.</p><h4>Angrefrist ved kjøp av billetter</h4><p>Ved kjøp av enkeltbillett i på vy.no, i appen eller på billettautomat har du en angrefrist på fire timer fra kjøpstidspunkt, såfremt det er før togets avgangstid. Du må ikke betale refusjonsgebyr. Du går frem som beskrevet under for å få kansellert og refundert billetten.</p><h4>Slik endrer eller refunderer du billett:</h4><ul><li>For billett i app: Refunder billetten og kjøp ny billett til avgangen du skal reise med</li><li>For billett kjøpt på vy.no: Logg deg inn på Min side for refusjon av billett under «Mine reiser» og kjøp ny billett til avgangen du skal reise med</li><li>Alternativt kan du ta kontakt med kundeservice</li></ul><p>Betalte du for billetten med Vy gavekort, må du kontakte kundeservice for å få refusjon.</p><p><a title=\"Se refusjonsbetingelsene\" href=\"/vilkar-og-personvern/refusjonsbetingelser-for-togbilletter\" target=\"_top\">Se refusjonsbetingelsene</a></p>"
+  },
+  {
+    "question": "Hvordan endrer jeg navn på billetten?",
+    "answer": "<p>Når du kjøper billetter så er det navnet til den som bestiller som står på billettene. Det er altså ikke noe i veien for at det står samme navn på flere billetter, så lenge personen som bestilte billettene skal være med på reisen.</p><p>Hvis ikke personen som står oppført på billettene blir med på reisen, ring eller chat med&nbsp;<a title=\"kundeservice\" href=\"/kundeservice/hjelp-og-kontakt\">kundeservice</a>&nbsp;for å endre navn.</p>"
+  },
+  {
+    "question": "Hvordan endrer jeg setereservasjonen min?",
+    "answer": "<p>For å endre setevalg på en betalt enkeltbillett må du først avbestille billetten. Du kan da kjøpe ny billett med ønsket setevalg. Du kan også kontakte ombordpersonalet på reisen – dersom de har tilgjengelige seter som passer deg bedre kan du benytte deg av disse ledige setene.</p><p>For å endre setereservasjonen på en periodebillett på et kort regiontog avbestiller du setet du har reservert, og reserverer et nytt. <a title=\"Les mer om hvordan setereservasjon fungerer\" href=\"/alt-om-reisen/tog/billetter/setereservasjon-pa-korte-regiontog\" target=\"_top\">Les mer om hvordan setereservasjon fungerer</a>.</p><p>Ville du endre navn på setereservasjonen? <a title=\"Se spørsmål om å endre navn på billetten\" href=\"/kundeservice/sporsmal-og-svar/endring-refusjon-og-kontrollgebyr?item=1850\" target=\"_top\">Se spørsmål om å endre navn på billetten</a>.</p>"
+  },
+  {
+    "question": "Toget mitt var forsinket – hvilken erstatning har jeg krav på og hvordan søker jeg om dette?",
+    "answer": "<p>Du har rett til å få 50 prosent av billettprisen refundert ved:</p><ul><li>Forsinkelse på over én time med Vys tog mellom Oslo og Trondheim, Oslo og Bergen, Oslo og Kristiansand/ Stavanger, samt Trondheim og Bodø.</li><li>Forsinkelse på over 30 minutter på alle andre tog. Reisende med periodebillett gis refusjon for billettprisen etter samme prinsipp som nevnt ovenfor, men delt på antall dager periodebilletten er gyldig for. Maksimal samlet refusjon for en periodebillett er begrenset oppad til 50 prosent av billettens kjøpspris.</li></ul><p>Du kan ikke kreve refusjon av billettprisen dersom du ble varslet om forsinkelser på 30 minutter/én time (se regel over) før billetten ble kjøpt.</p><p>I situasjoner der du må bruke alternativ transport eller får andre utgifter i forbindelse med forsinkelse eller kansellering av tog, kan du få refundert hele eller deler av utleggene. Dette må gjøres skriftlig med vedlagt dokumentasjon innen tre måneder etter hendelsen.</p><p><a title=\"Søk om prisavslag eller erstatning\" href=\"/kundeservice/prisavslag-og-erstatning\" target=\"_top\">Søk om prisavslag eller erstatning</a>.</p>"
+  },
+  {
+    "question": "Kan jeg få erstatning for merkostnader ved forsinkelse?",
+    "answer": "<p>I situasjoner der du må ta i bruk alternativ transport eller får andre utgifter i forbindelse med forsinkelse eller kansellering av tog, kan du få refundert hele eller deler av utleggene. Dette må gjøres skriftlig med vedlagt dokumentasjon innen tre måneder etter hendelsen.</p><p><a title=\"Søk om prisavslag eller erstatning\" href=\"/kundeservice/prisavslag-og-erstatning\" target=\"_top\">Søk om prisavslag eller erstatning</a></p>"
+  },
+  {
+    "question": "Jeg har fått kontrollgebyr på toget– hvordan klager jeg på denne?",
+    "answer": "<p><a title=\"Her kan du lese mer om kontrollgebyr og sende en klage\" href=\"/kundeservice/kontrollgebyr\" target=\"_top\">Her kan du lese mer om kontrollgebyr og sende en klage</a>.</p>"
+  },
+  {
+    "question": "Jeg rakk ikke toget. Kan jeg få refundert billetten?",
+    "answer": "<p>Alle billetter må refunderes før avgang, du vil ikke ha krav på refusjon etter togavgangen dersom du ikke rekker toget ditt.</p><p><a title=\"Se refusjonsbetingelsene\" href=\"/vilkar-og-personvern/refusjonsbetingelser-for-togbilletter\" target=\"_top\">Se refusjonsbetingelsene</a>.</p>"
+  },
+  {
+    "question": "Hvordan endrer jeg betalingskortet tilknyttet Vy-profilen min?",
+    "answer": "<p>Du kan slette og legge til betalingskort ved å logge inn på vy.no og gå til «Min profil». I appen går du til «Profil», så velger du «Betaling».</p>"
+  },
+  {
+    "answer": "<li data-v-2e64a7c0=\"\" class=\"item\"><a data-v-2e64a7c0=\"\" href=\"/kundeservice/sporsmal-og-svar/billetter-og-setereservasjon\" class=\"EPiLink link animated-link\" target=\"_top\" rel=\"\">                    Billetter og setereservasjon                </a></li><li data-v-2e64a7c0=\"\" class=\"item\"><a data-v-2e64a7c0=\"\" href=\"/kundeservice/sporsmal-og-svar/bagasje-og-spesielle-behov\" class=\"EPiLink link animated-link\" target=\"_top\" rel=\"\">                    Bagasje og spesielle behov                </a></li><li data-v-2e64a7c0=\"\" class=\"item\"><a data-v-2e64a7c0=\"\" href=\"/kundeservice/sporsmal-og-svar/trafikk-og-ruter\" class=\"EPiLink link animated-link\" target=\"_top\" rel=\"\">                    Trafikk og ruter                </a></li><li data-v-2e64a7c0=\"\" class=\"item\"><a data-v-2e64a7c0=\"\" href=\"/kundeservice/sporsmal-og-svar/mat-om-bord\" class=\"EPiLink link animated-link\" target=\"_top\" rel=\"\">                    Mat om bord                </a></li><li data-v-2e64a7c0=\"\" class=\"item\"><a data-v-2e64a7c0=\"\" href=\"/kundeservice/sporsmal-og-svar/apper-og-internett\" class=\"EPiLink link animated-link\" target=\"_top\" rel=\"\">                    Apper, internett og strømuttak                </a></li>"
+  }
+]

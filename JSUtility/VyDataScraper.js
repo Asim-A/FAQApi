@@ -1,5 +1,6 @@
 // Array av klasser "promotional-block" (div), alle de har en anchor med klasse "EPiLink" som inneholder href
 
+// Lagres som categories.json
 let promotional_divs = document.getElementsByClassName("promotion-block-text");
 let categories = [];
 
@@ -17,22 +18,40 @@ for (var i = 0; i < promotional_divs.length; i++) {
 
   categories.push(question);
 }
+// categories.json slutt
 
-let questions = [];
-
-for (var i = 0; i < categories.length; i++) {
-  const href = categories[i]["question_link"];
-  const link = defaultLink + href;
-
-  response_html = await getQuestions(link);
-
-  response_html = response_html.then();
+// lagres som qa[0-9].json
+function getTextFromButton(s) {
+  return s.childNodes[0].innerText;
 }
 
-async function getQuestions(url) {
-  const response = fetch(url).then(res => {
-    return res.text();
-  });
+function getTextFromDiv(input) {
+  return input.childNodes[2].innerHTML;
 }
 
-async function makeQuestions(html, question_array) {}
+function setupQuestions(questions, headings) {
+  for (var i = 0; i < headings.length; i++) {
+    const mySpan = headings[i];
+    const mySpan_parent = mySpan.parentNode;
+
+    const q = getTextFromButton(mySpan);
+
+    const a = getTextFromDiv(mySpan_parent);
+
+    questions.push({
+      question: q,
+      answer: a
+    });
+  }
+}
+
+function getJson() {
+  let questions = [];
+  let headings = document.getElementsByClassName("Heading--h3");
+
+  setupQuestions(questions, headings);
+  let myJSON = JSON.stringify(questions);
+  console.log(myJSON);
+}
+
+// slutt qa
