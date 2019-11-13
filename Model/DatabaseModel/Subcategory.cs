@@ -11,7 +11,7 @@ namespace FAQApi.Model.DatabaseModel
 
         [Key]
         public int subcategory_id { get; set; }
-        public string subcategory_title { get; set; }
+        public string? subcategory_title { get; set; }
         public Category Category { get; set; }
         public ICollection<Question> Questions { get; set; }
 

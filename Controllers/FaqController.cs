@@ -36,13 +36,33 @@ namespace FAQApi.Controllers
         [HttpGet]
         public string Get()
         {
+            
 
+            //List<Subcategory> s =
+            //    context.subcategories.Where(sc => sc.Category.category_id == 1)
+            //    .Include(sc => sc.Questions)
+            //    .ToList();
+
+            List<Category> v =
+                context.categories
+                .Include(catagories => catagories.Subcategories)
+                .ThenInclude(sc => sc.Questions)
+                .ToList();
+
+            string ss = JsonConvert.SerializeObject(v);
+
+            return ss;
+            
+        }
+
+        public void generateTestSet()
+        {
             ICollection<Question> q = new List<Question>();
             ICollection<Question> q2 = new List<Question>();
 
             ICollection<Subcategory> subcats = new List<Subcategory>();
 
-            foreach(var item in questions)
+            foreach (var item in questions)
             {
 
                 var d = new Question
@@ -54,8 +74,9 @@ namespace FAQApi.Controllers
 
             }
 
-            q2.Add(new Question { 
-               question_body = "HVA SKJER MED VY?!"
+            q2.Add(new Question
+            {
+                question_body = "HVA SKJER MED VY?!"
             });
 
             Subcategory s1 = new Subcategory
@@ -73,7 +94,7 @@ namespace FAQApi.Controllers
             subcats.Add(s1);
             subcats.Add(s2);
 
-            
+
 
             Category category = new Category
             {
@@ -81,43 +102,10 @@ namespace FAQApi.Controllers
                 Subcategories = subcats
             };
 
-            //context.categories.Add(category);
-
-            //context.SaveChanges();
-
-            List<Subcategory> s =
-                context.subcategories.Where(sc => sc.Category.category_id == 1)
-                .Include(sc => sc.Questions)
-                //.Include(x => x.Category)
-                .ToList();
-
-
-
-
-            //string ss = JsonConvert.SerializeObject(s, Formatting.None,
-            //new JsonSerializerSettings()
-            //{
-            //    ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-            //}
-            //);
-
-            string ss = JsonConvert.SerializeObject(s);
-
-            return ss;
-            
-
-            //return Enumerable.Range(0, questions.Length).Select(i => new Question { 
-            //    question_id = i,
-            //    question_body = questions[i]
-            //});
+            context.categories.Add(category);
+            context.SaveChanges();
         }
 
-        //[Route("/v1/faq/index")]
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-        
 
 
     }

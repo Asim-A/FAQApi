@@ -1,21 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using FAQApi.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Http;
-using JavaScriptEngineSwitcher.ChakraCore;
-using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
-using React.AspNet;
 using Newtonsoft.Json;
 
 namespace FAQApi
@@ -56,7 +48,7 @@ namespace FAQApi
 
             JsonConvert.DefaultSettings = () => new JsonSerializerSettings
             {
-                Formatting = Newtonsoft.Json.Formatting.Indented,
+                Formatting = Newtonsoft.Json.Formatting.None,
                 ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             };
 
@@ -71,7 +63,8 @@ namespace FAQApi
             {
                 endpoints.MapControllers();
             });
-
+            var dataText = System.IO.File.ReadAllText(@"JSUtility/catagory1.json");
+            Seeder.Seedit(dataText, app.ApplicationServices);
             app.UseStaticFiles();
 
         }

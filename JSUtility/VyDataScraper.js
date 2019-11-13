@@ -23,7 +23,8 @@ function setupCategories() {
   }
 }
 // categories.json slutt
-
+const heading2 = "Heading--h2";
+const heading3 = "Heading--h3";
 // lagres som qa[0-9].json
 function getTextFromButton(s) {
   return s.childNodes[0].innerText;
@@ -33,9 +34,13 @@ function getTextFromDiv(input) {
   return input.childNodes[2].innerHTML;
 }
 
-function setupQuestions(questions, headings) {
-  for (var i = 0; i < headings.length; i++) {
-    const mySpan = headings[i];
+function getQuestions(subCat) {
+  let questions = [];
+
+  const allQs = subCat.getElementsByClassName(heading3);
+
+  for (var i = 0; i < allQs.length; i++) {
+    const mySpan = allQs[i];
     const mySpan_parent = mySpan.parentNode;
 
     const q = getTextFromButton(mySpan);
@@ -43,18 +48,56 @@ function setupQuestions(questions, headings) {
     const a = getTextFromDiv(mySpan_parent);
 
     questions.push({
-      question: q,
+      question_body: q,
       answer: a
     });
   }
+
+  return questions;
+}
+
+function getAllSubCatNodes() {
+  let nodes = [];
+
+  let h = document.getElementsByClassName(heading2);
+
+  for (let i = 0; i < h.length; i++) {
+    nodes.push(h[i].parentNode);
+  }
+
+  return nodes;
+}
+
+function getSubCatText(parent) {
+  const subText = parent.getElementsByClassName(heading2)[0].innerText;
+  return subText;
 }
 
 function getJson() {
-  let questions = [];
-  let headings = document.getElementsByClassName("Heading--h3");
+  let subcategories = [];
+  let parent = getAllSubCatNodes();
 
-  setupQuestions(questions, headings);
-  let myJSON = JSON.stringify(questions);
+  if (parent.length === 0) {
+    const subcatTitle = "";
+    const qs = getQuestions(document);
+
+    subcategories.push({
+      subcategory_title: subcatTitle,
+      Questions: qs
+    });
+  } else {
+    for (let i = 0; i < parent.length; i++) {
+      const subcatTitle = getSubCatText(parent[i]);
+      const qs = getQuestions(parent[i]);
+
+      subcategories.push({
+        subcategory_title: subcatTitle,
+        Questions: qs
+      });
+    }
+  }
+
+  let myJSON = JSON.stringify(subcategories);
   console.log(myJSON);
 }
 
