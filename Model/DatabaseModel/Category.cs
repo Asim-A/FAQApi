@@ -12,7 +12,7 @@ namespace FAQApi.Model.DatabaseModel
         [Key]
         public int category_id { get; set; }
         public string category_body { get; set; }
-        public ICollection<Question> Questions { get; set; }
+        public ICollection<Subcategory> Subcategories { get; set; }
            
     }
 }

@@ -1,22 +1,26 @@
 // Array av klasser "promotional-block" (div), alle de har en anchor med klasse "EPiLink" som inneholder href
 
 // Lagres som categories.json
-let promotional_divs = document.getElementsByClassName("promotion-block-text");
-let categories = [];
-
 const defaultLink = "https://www.vy.no/";
 
-for (var i = 0; i < promotional_divs.length; i++) {
-  const anc = promotional_divs[i].getElementsByClassName("EPiLink")[0];
-  const href = anc.getAttribute("href");
-  const span = anc.getElementsByClassName("typography-heading-2")[0];
+function setupCategories() {
+  let promotional_divs = document.getElementsByClassName(
+    "promotion-block-text"
+  );
+  let categories = [];
 
-  const question = {
-    question_body: span.innerHTML.trim(),
-    question_link: href
-  };
+  for (var i = 0; i < promotional_divs.length; i++) {
+    const anc = promotional_divs[i].getElementsByClassName("EPiLink")[0];
+    const href = anc.getAttribute("href");
+    const span = anc.getElementsByClassName("typography-heading-2")[0];
 
-  categories.push(question);
+    const question = {
+      question_body: span.innerHTML.trim(),
+      question_link: href
+    };
+
+    categories.push(question);
+  }
 }
 // categories.json slutt
 

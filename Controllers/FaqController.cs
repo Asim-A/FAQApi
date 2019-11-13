@@ -8,6 +8,7 @@ using FAQApi.Model.DatabaseModel;
 using FAQApi.Model.DTOModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -23,6 +24,7 @@ namespace FAQApi.Controllers
             this.context = context;
         }
 
+
         private static readonly string[] questions = new[]
         {
             "Hvor ofte går bussen?",
@@ -32,15 +34,13 @@ namespace FAQApi.Controllers
 
         // GET: /<controller>/
         [HttpGet]
-        public IEnumerable<Question> Get()
+        public string Get()
         {
 
-            //context.questions.Add(new Question
-            //{
-            //    question_body = "TEST BODY"
-            //});
-
             ICollection<Question> q = new List<Question>();
+            ICollection<Question> q2 = new List<Question>();
+
+            ICollection<Subcategory> subcats = new List<Subcategory>();
 
             foreach(var item in questions)
             {
@@ -54,21 +54,56 @@ namespace FAQApi.Controllers
 
             }
 
-            Category category = new Category
+            q2.Add(new Question { 
+               question_body = "HVA SKJER MED VY?!"
+            });
+
+            Subcategory s1 = new Subcategory
             {
-                category_body = "Diverse",
+                subcategory_title = "Buss",
                 Questions = q
             };
 
-            context.categories.Add(category);
+            Subcategory s2 = new Subcategory
+            {
+                subcategory_title = "VY!",
+                Questions = q2
+            };
 
-            context.SaveChanges();
+            subcats.Add(s1);
+            subcats.Add(s2);
 
-            List<Question> s = 
-                context.questions.Where(x => x.Category.category_id == 1).ToList();
+            
+
+            Category category = new Category
+            {
+                category_body = "Diverse",
+                Subcategories = subcats
+            };
+
+            //context.categories.Add(category);
+
+            //context.SaveChanges();
+
+            List<Subcategory> s =
+                context.subcategories.Where(sc => sc.Category.category_id == 1)
+                .Include(sc => sc.Questions)
+                //.Include(x => x.Category)
+                .ToList();
 
 
-            return s;
+
+
+            //string ss = JsonConvert.SerializeObject(s, Formatting.None,
+            //new JsonSerializerSettings()
+            //{
+            //    ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            //}
+            //);
+
+            string ss = JsonConvert.SerializeObject(s);
+
+            return ss;
             
 
             //return Enumerable.Range(0, questions.Length).Select(i => new Question { 
@@ -77,7 +112,11 @@ namespace FAQApi.Controllers
             //});
         }
 
-
+        //[Route("/v1/faq/index")]
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
         
 
 

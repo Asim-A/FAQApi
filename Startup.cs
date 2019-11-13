@@ -12,6 +12,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Http;
+using JavaScriptEngineSwitcher.ChakraCore;
+using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
+using React.AspNet;
+using Newtonsoft.Json;
 
 namespace FAQApi
 {
@@ -30,7 +35,15 @@ namespace FAQApi
             services.AddDbContext<FAQContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("FAQDatabase")));
             services.AddControllers();
-            
+            //services.AddMvc();
+            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            //services.AddReact()
+
+            //// Make sure a JS engine is registered, or you will get an error!
+            //services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
+            //  .AddChakraCore();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,6 +53,13 @@ namespace FAQApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+                Formatting = Newtonsoft.Json.Formatting.Indented,
+                ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            };
+
 
             app.UseHttpsRedirection();
 
@@ -51,6 +71,9 @@ namespace FAQApi
             {
                 endpoints.MapControllers();
             });
+
+            app.UseStaticFiles();
+
         }
     }
 }

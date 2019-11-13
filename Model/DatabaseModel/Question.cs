@@ -17,7 +17,7 @@ namespace FAQApi.Model.DatabaseModel
         public int question_likes { get; set; } = 0;
         public int question_dislikes { get; set; } = 0;
  
-        public Category Category { get; set; }
+        public Subcategory Subcategory { get; set; }
         
         public string answer { get; set; }
 
