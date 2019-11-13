@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using FAQApi.Database;
 using FAQApi.Model.DatabaseModel;
 using FAQApi.Model.DTOModel;
+using FAQApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -36,20 +37,22 @@ namespace FAQApi.Controllers
         [HttpGet]
         public string Get()
         {
-            
+
 
             //List<Subcategory> s =
             //    context.subcategories.Where(sc => sc.Category.category_id == 1)
             //    .Include(sc => sc.Questions)
             //    .ToList();
 
-            List<Category> v =
-                context.categories
-                .Include(catagories => catagories.Subcategories)
-                .ThenInclude(sc => sc.Questions)
-                .ToList();
+            //List<Category> v =
+            //    context.categories
+            //    .Include(catagories => catagories.Subcategories)
+            //    .ThenInclude(sc => sc.Questions)
+            //    .ToList();
 
-            string ss = JsonConvert.SerializeObject(v);
+            //string ss = JsonConvert.SerializeObject(v);
+
+            string ss = new CategoryRepository(context).GetAllAsString();
 
             return ss;
             

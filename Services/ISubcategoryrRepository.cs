@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace FAQApi.Services
 {
-    public interface IFaqRepository
+    interface ISubcategoryrRepository : IRepository<Subcategory>
     {
-
-        Task<IEnumerable<Category>> GetCatagoriesAsync();
-        public void SaveAsync();
-
-
     }
 }
