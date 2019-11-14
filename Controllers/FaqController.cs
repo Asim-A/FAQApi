@@ -11,12 +11,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 
-// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace FAQApi.Controllers
 {
-    [ApiController]
+    
     [Route("/v1/[controller]")]
+    [ApiController]
     public class FaqController : Controller
     {
         private readonly FAQContext context;
@@ -25,34 +24,11 @@ namespace FAQApi.Controllers
             this.context = context;
         }
 
-
-        private static readonly string[] questions = new[]
-        {
-            "Hvor ofte går bussen?",
-            "Hvorfor går bussen nå?",
-            "Hva er vy?"
-        };
-
         // GET: /<controller>/
         [HttpGet]
-        public string Get()
-        {
+        public string Get() { 
 
-
-            //List<Subcategory> s =
-            //    context.subcategories.Where(sc => sc.Category.category_id == 1)
-            //    .Include(sc => sc.Questions)
-            //    .ToList();
-
-            //List<Category> v =
-            //    context.categories
-            //    .Include(catagories => catagories.Subcategories)
-            //    .ThenInclude(sc => sc.Questions)
-            //    .ToList();
-
-            //string ss = JsonConvert.SerializeObject(v);
-
-            string ss = new CategoryRepository(context).GetAllAsString();
+            string ss = new CategoryRepository(context).GetIncludeJSON(1);
 
             return ss;
             

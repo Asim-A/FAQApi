@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FAQApi.Services
 {
-    interface ISubcategoryrRepository : IRepository<Subcategory>
+    public interface ISubcategoryRepository : IRepository<Subcategory>
     {
     }
 }

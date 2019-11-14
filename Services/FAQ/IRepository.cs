@@ -1,4 +1,5 @@
 ﻿using FAQApi.Model.DatabaseModel;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,9 @@ namespace FAQApi.Services
 
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
+
+        DbSet<TEntity> getSet();
+
 
 
 

@@ -42,6 +42,11 @@ namespace FAQApi.Services
             return context.Set<TEntity>().ToList();
         }
 
+        public DbSet<TEntity> getSet()
+        {
+            return context.Set<TEntity>();
+        }
+
         public void Remove(TEntity entity)
         {
             context.Set<TEntity>().Remove(entity);

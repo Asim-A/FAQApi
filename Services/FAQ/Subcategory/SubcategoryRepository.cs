@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FAQApi.Services
 {
-    public class SubcategoryRepository : Repository<Subcategory>, ISubcategoryrRepository
+    public class SubcategoryRepository : Repository<Subcategory>, ISubcategoryRepository
     {
         public SubcategoryRepository(FAQContext c) : base(c)
         {

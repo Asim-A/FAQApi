@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace FAQApi.Services
 {
-    public interface ICategoryRepository : IRepository<Category>
+    public interface IQuestionRepository : IRepository<Question>
     {
-
-
-
     }
 }

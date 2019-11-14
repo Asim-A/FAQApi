@@ -48,7 +48,7 @@ namespace FAQApi
 
             JsonConvert.DefaultSettings = () => new JsonSerializerSettings
             {
-                Formatting = Newtonsoft.Json.Formatting.None,
+                Formatting = Newtonsoft.Json.Formatting.Indented,
                 ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             };
 
