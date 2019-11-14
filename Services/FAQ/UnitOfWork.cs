@@ -18,6 +18,8 @@ namespace FAQApi.Services.FAQ
         {
             _context = context;
             Categories = new CategoryRepository(_context);
+            Subcategories = new SubcategoryRepository(_context);
+            Questions = new QuestionRepository(_context);
         }
 
 

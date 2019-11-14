@@ -21,6 +21,8 @@ namespace FAQApi.Services
         void Remove(TEntity entity);
         void RemoveRange(IEnumerable<TEntity> entities);
 
+        public void Update(TEntity newEntity);
+
         DbSet<TEntity> getSet();
 
 

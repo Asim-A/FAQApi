@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace FAQApi.Services
-{
+{   
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
 
@@ -55,6 +55,11 @@ namespace FAQApi.Services
         public void RemoveRange(IEnumerable<TEntity> entities)
         {
             context.Set<TEntity>().RemoveRange(entities);
+        }
+
+        public void Update(TEntity newEntity)
+        {
+            context.Entry(newEntity).State = EntityState.Modified;
         }
     }
 }
