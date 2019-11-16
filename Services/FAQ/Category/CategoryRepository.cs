@@ -23,6 +23,18 @@ namespace FAQApi.Services
             return JsonConvert.SerializeObject(GetAll());
         }
 
+        public string GetWithQuestionID(int id)
+        {
+            var list = getContext().categories
+                .Where(c => c.category_id == id)
+                .Include(cat => cat.Subcategories)
+                    .ThenInclude(sc => sc.Questions)
+                    .ThenInclude(q => q.question_id)
+                .ToList();
+
+            return JsonConvert.SerializeObject(list);
+        }
+
 
         FAQContext getContext()
         {

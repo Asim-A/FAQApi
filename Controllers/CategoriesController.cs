@@ -20,23 +20,22 @@ namespace FAQApi.Controllers
         [HttpGet]
         public string Get()
         {
+            UnitOfWork unitOfWork = new UnitOfWork(context);
+            string s = unitOfWork.Categories.GetAllJSON();
 
-            using (UnitOfWork unit = new UnitOfWork(context))
-            {
-                return unit.Categories.GetAllJSON();
-            }
-            
-           
+            unitOfWork.Dispose();
+            return s;
         }
 
         // GET: v1/faq/Categories/5
         [HttpGet("{id}")]
         public string Get(int id)
-        {         
-            using (UnitOfWork unit = new UnitOfWork(context))
-            {
-                return unit.Categories.GetIncludeJSON(id);
-            }                        
+        {
+            UnitOfWork unit = new UnitOfWork(context);
+            string s = unit.Categories.GetIncludeJSON(id);
+            
+            unit.Dispose();
+            return s;
         }
 
         // GET: v1/faq/Categories/GetAll
@@ -45,10 +44,11 @@ namespace FAQApi.Controllers
         [Route("GetAll")]  
         public string GetAll()
         {
-            using(UnitOfWork unit = new UnitOfWork(context))
-            {
-                return unit.Categories.GetAllIncludedJSON();
-            }
+            UnitOfWork unit = new UnitOfWork(context);
+            string all = unit.Categories.GetAllIncludedJSON();
+            
+            unit.Dispose();
+            return all;
         }
 
         // Brukes ikke

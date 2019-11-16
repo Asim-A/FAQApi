@@ -37,14 +37,15 @@ namespace FAQApi.Controllers
         public IActionResult Put(int id,[FromBody] Question newQuestion)
         {
             if (id != newQuestion.question_id)
-                return StatusCode(400); 
+                return StatusCode(400);
 
-            using (UnitOfWork unit = new UnitOfWork(context))
-            {
-                unit.Questions.Update(newQuestion);
-                unit.Save(); //nødvendig
-                return StatusCode(201);
-            }
+            UnitOfWork unit = new UnitOfWork(context);
+            unit.Questions.Update(newQuestion);
+            unit.Save(); //nødvendig
+            unit.Dispose();
+
+            return StatusCode(201); //Status code for created
+            
         }
 
 

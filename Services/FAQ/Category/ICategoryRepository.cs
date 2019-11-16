@@ -13,8 +13,10 @@ namespace FAQApi.Services
         string GetIncludeJSON(int id);
         string GetAllJSON();
         string GetAllIncludedJSON();
+        public string GetWithQuestionID(int id);
 
-        
+
+
 
     }
 }

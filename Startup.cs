@@ -27,6 +27,8 @@ namespace FAQApi
             services.AddDbContext<FAQContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("FAQDatabase")));
             services.AddControllers();
+            services.AddCors();
+
             //services.AddMvc();
             //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //services.AddReact()
@@ -58,6 +60,10 @@ namespace FAQApi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(
+                options => options.WithOrigins("https://localhost:44382").AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader()
+            );
 
             app.UseEndpoints(endpoints =>
             {
