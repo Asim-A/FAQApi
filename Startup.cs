@@ -51,7 +51,6 @@ namespace FAQApi
                 ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
             };
 
-
             app.UseHttpsRedirection();
 
             app.UseRouting();

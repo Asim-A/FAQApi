@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
+//Brukes ikke fordi bare 1 svar per spørsmål
 namespace FAQApi.Model.DatabaseModel
 {
     public class Answer

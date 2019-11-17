@@ -12,7 +12,7 @@ class Subcategory extends Component {
   render() {
     return (
       <div className="subcategory">
-        <h1>{this.props.title}</h1>
+        <h2>{this.props.title}</h2>
         <Questions sub_id={this.props.id}></Questions>
       </div>
     );
