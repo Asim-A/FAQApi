@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Accordion from "./Accordion";
 import Subcategory from "./Subcategory";
+import "../Categories.css";
 
 class Categories extends Component {
   constructor(props) {
@@ -45,9 +45,22 @@ class Categories extends Component {
     if (myObj.length === 0) return <h1></h1>;
 
     //vet hvis myObj ikke er tom så er det akkurat 1 subcat, mtp. backend.
-    let subcategories = myObj[0].Subcategories;
+    let category = myObj[0];
 
-    return this.createSubcategories(subcategories);
+    let subcategories = category.Subcategories;
+
+    return (
+      <div className="category">
+        <h1>{category.category_title}</h1>
+        <h4 className="cathead">{category.category_body}</h4>
+
+        <button className="btn btn-info">
+          Hvis du ikke finne svar på spørsmålet ditt kan du kontakte oss her
+        </button>
+
+        {this.createSubcategories(subcategories)}
+      </div>
+    );
   }
 }
 

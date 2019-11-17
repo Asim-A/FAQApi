@@ -3,8 +3,7 @@ import CategoryCardContainer from "./Components/CategoryCardContainer";
 import Categories from "./Components/Categories";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Accordion from "./Components/Accordion";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (

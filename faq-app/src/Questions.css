@@ -1,5 +1,28 @@
 .question {
-  width: 50%;
   justify-content: center;
   margin: 0.3% auto;
+  display: flex;
+}
+
+.upvote {
+  margin: 10px;
+  flex-direction: column;
+  display: flex;
+}
+
+.chev {
+  transform: rotate(-90deg);
+  display: flex;
+}
+
+.rotateleft {
+  transform: rotate(-90deg);
+}
+
+.rotateright {
+  transform: rotate(90deg);
+}
+
+.likes {
+  display: flex;
 }

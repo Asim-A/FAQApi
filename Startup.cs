@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
+using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 
 namespace FAQApi
 {
@@ -29,14 +30,10 @@ namespace FAQApi
             services.AddControllers();
             services.AddCors();
 
-            //services.AddMvc();
-            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //services.AddReact()
-
-            //// Make sure a JS engine is registered, or you will get an error!
-            //services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
-            //  .AddChakraCore();
-
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "faq-app/build";
+            });
 
         }
 
@@ -61,6 +58,9 @@ namespace FAQApi
 
             app.UseAuthorization();
 
+            app.UseStaticFiles();
+            app.UseSpaStaticFiles();
+
             app.UseCors(
                 options => options.WithOrigins("https://localhost:44382").AllowAnyMethod().AllowAnyOrigin().AllowAnyHeader()
             );
@@ -69,9 +69,20 @@ namespace FAQApi
             {
                 endpoints.MapControllers();
             });
+
+            app.UseSpa(spa =>
+            {
+                spa.Options.SourcePath = "faq-app";
+
+                if (env.IsDevelopment())
+                {
+                    spa.UseReactDevelopmentServer(npmScript: "start");
+                }
+            });
+
             var dataText = System.IO.File.ReadAllText(@"JSUtility/catagory1.json");
             Seeder.Seedit(dataText, app.ApplicationServices);
-            app.UseStaticFiles();
+            
 
         }
     }

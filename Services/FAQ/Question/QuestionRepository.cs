@@ -22,7 +22,10 @@ namespace FAQApi.Services
         {
             string s;
 
-            var list = getContext().questions.Where(q => q.Subcategory.subcategory_id == id).ToList();
+            var list = getContext().questions
+                .Where(q => q.Subcategory.subcategory_id == id)
+                .OrderByDescending(questions => questions.question_likes)
+                .ToList();
 
             s = JsonConvert.SerializeObject(list);
 

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Questions from "./Questions";
+import "../Subcategory.css";
 
 class Subcategory extends Component {
   constructor(props) {
@@ -10,10 +11,10 @@ class Subcategory extends Component {
 
   render() {
     return (
-      <Fragment>
+      <div className="subcategory">
         <h1>{this.props.title}</h1>
         <Questions sub_id={this.props.id}></Questions>
-      </Fragment>
+      </div>
     );
   }
 }

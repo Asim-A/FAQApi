@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Accordion from "./Accordion";
 import "../Questions.css";
+import Chevron from "./Chevron";
 
 class Questions extends Component {
   constructor(props) {
@@ -29,6 +30,20 @@ class Questions extends Component {
       <div className="question-wrapper">
         {Questions.map(question => (
           <div className="question">
+            <div className="upvote">
+              <Chevron
+                className="chev rotateleft"
+                height={10}
+                width={10}
+              ></Chevron>
+              <div className="likes">{question.question_likes}</div>
+              <Chevron
+                className="chev rotateright"
+                height={10}
+                width={10}
+              ></Chevron>
+            </div>
+
             <Accordion
               key={question.question_id}
               question_body={question.question_body}
