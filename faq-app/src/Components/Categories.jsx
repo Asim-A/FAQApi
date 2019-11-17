@@ -11,20 +11,6 @@ class Categories extends Component {
     };
   }
 
-  createAccordions = questions => {
-    return (
-      <div>
-        {questions.map(question => (
-          <Accordion
-            key={question.question_id}
-            question_body={question.question_body}
-            answer={question.answer}
-          ></Accordion>
-        ))}
-      </div>
-    );
-  };
-
   createSubcategories = subcategories => {
     return (
       <div className="subcategory-wrapper">
@@ -58,6 +44,7 @@ class Categories extends Component {
 
     if (myObj.length === 0) return <h1></h1>;
 
+    //vet hvis myObj ikke er tom så er det akkurat 1 subcat, mtp. backend.
     let subcategories = myObj[0].Subcategories;
 
     return this.createSubcategories(subcategories);

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Accordion from "./Accordion";
+import "../Questions.css";
 
 class Questions extends Component {
   constructor(props) {
