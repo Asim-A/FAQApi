@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import Card from "react-bootstrap/Card";
-import Categories from "./Categories";
+
 import { Link, Route } from "react-router-dom";
 
 class CategoryCard extends Component {

@@ -8,5 +8,6 @@ namespace FAQApi.Services
 {
     public interface IQuestionRepository : IRepository<Question>
     {
+        public string GetQuestionsBySubcategory(int id);
     }
 }

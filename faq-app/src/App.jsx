@@ -4,6 +4,7 @@ import Categories from "./Components/Categories";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Accordion from "./Components/Accordion";
 
 function App() {
   return (

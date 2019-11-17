@@ -28,6 +28,20 @@ namespace FAQApi.Controllers
             return "";
         }
 
+        // v1/faq/questions/bySubcategory?id=x
+        // der x er en int.
+        [HttpGet("bySubcategory")]
+        public string Get(int id)
+        {
+
+            UnitOfWork unitofwork = new UnitOfWork(context);
+            string s = unitofwork.Questions.GetQuestionsBySubcategory(id);
+
+            unitofwork.Dispose();
+
+            return s;
+        }
+
 
         /**
          * Fordi det blir sendt komplekse objekter, må request-en sende data i body (som json), ikke URI.

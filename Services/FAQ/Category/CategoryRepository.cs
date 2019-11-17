@@ -35,12 +35,6 @@ namespace FAQApi.Services
             return JsonConvert.SerializeObject(list);
         }
 
-
-        FAQContext getContext()
-        {
-            return (context as FAQContext);
-        }
-
         public string GetIncludeJSON(int id)
         {
             string json;
@@ -48,8 +42,7 @@ namespace FAQApi.Services
             var item = getContext()
                         .categories
                         .Where(cat => cat.category_id == id)
-                        .Include(catagory => catagory.Subcategories)
-                            .ThenInclude(sc => sc.Questions);
+                        .Include(catagory => catagory.Subcategories);
 
             json = JsonConvert.SerializeObject(item);
             return json;
@@ -67,6 +60,11 @@ namespace FAQApi.Services
             json = JsonConvert.SerializeObject(list);
 
             return json;
+        }
+
+        FAQContext getContext()
+        {
+            return (context as FAQContext);
         }
     }
 }
