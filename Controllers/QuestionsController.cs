@@ -25,7 +25,11 @@ namespace FAQApi.Controllers
         [HttpGet]
         public string Get()
         {
-            return "";
+            UnitOfWork unit = new UnitOfWork(context);
+            string s = JsonConvert.SerializeObject(unit.Questions.GetAll());
+
+            unit.Dispose();
+            return s;
         }
 
         // v1/faq/questions/bySubcategory?id=x

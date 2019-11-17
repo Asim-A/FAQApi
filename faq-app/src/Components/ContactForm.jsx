@@ -1,38 +1,76 @@
 import React, { Component } from "react";
+import "../ContactForm.css";
 
 class ContactForm extends Component {
+  state = {
+    email: "",
+    question: "",
+    emailError: "",
+    questionError: ""
+  };
+
+  validateEmail(email) {
+    var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    return re.test(String(email).toLowerCase());
+  }
+
+  validate = () => {
+    let emailError = "";
+    let questionError = "";
+
+    if (!this.validateEmail(this.state.email)) {
+      emailError = "Eposten er ugyldig.";
+    }
+
+    if (!this.state.question) {
+      this.questionError = "Du må skrive inn noe!";
+    }
+
+    if (emailError || questionError) {
+    }
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+
+    const isValid = this.validate();
+  };
+
   render() {
     return (
-      <div class="container">
+      <div className="d-flex contact-wrapper">
         <div>
-          <h2>Contact Us</h2>
-          <p>Swing by for a cup of coffee, or leave us a message:</p>
+          <h1>Send inn ditt spørsmål!</h1>
+          <p>
+            Hvis FAQ siden vår manglet et spørsmål som du gjerne ønsker å få
+            svar på kan du kontakte oss her.
+          </p>
         </div>
-        <div class="row">
-          <div class="column">
-            <form>
-              <label for="fname">First Name</label>
-              <input
-                type="text"
-                id="fname"
-                name="firstname"
-                placeholder="Your name.."
-              />
-              <label for="lname">Last Name</label>
-              <input
-                type="text"
-                id="lname"
-                name="lastname"
-                placeholder="Your last name.."
-              />
-              <label for="country">Country</label>
-              <label for="subject">Subject</label>
-              <textarea
-                id="subject"
-                name="subject"
-                placeholder="Write something.."
-              ></textarea>
-              <input type="submit" value="Submit" />
+        <div className="d-flex cf-wrapper">
+          <div>
+            <form className="form-wrapper">
+              <div className="input-wrapper">
+                <label htmlFor="cemail">Epost:</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  id="cemail"
+                  name="customer_email"
+                  placeholder="Kari_Nilsen@hotmail.no"
+                />
+              </div>
+              <div className="input-wrapper">
+                <label htmlFor="cquestion">Spørsmål:</label>
+                <input
+                  className="form-control"
+                  type="text"
+                  id="cquestion"
+                  name="customer_question"
+                  placeholder="Hvordan kjøper man billett?"
+                />
+              </div>
+
+              <input className="btn btn-primary" type="submit" value="Submit" />
             </form>
           </div>
         </div>

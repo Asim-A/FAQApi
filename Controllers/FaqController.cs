@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using FAQApi.Database;
 using FAQApi.Model.DatabaseModel;
-using FAQApi.Model.DTOModel;
 using FAQApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;

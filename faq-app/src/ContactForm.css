@@ -1,0 +1,21 @@
+.contact-wrapper {
+  flex-direction: column;
+}
+
+.cf-wrapper {
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper > label {
+  text-align: left !important;
+}
+
+.input-wrapper {
+  margin: 5% 0;
+}

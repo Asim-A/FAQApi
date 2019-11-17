@@ -22,6 +22,7 @@ namespace FAQApi.Database
         public DbSet<Category> categories { get; set; }
         public DbSet<Subcategory> subcategories { get; set; }
         public DbSet<Question> questions { get; set; }
+        public DbSet<CustomerQuestion> customer_questions {get;set;}
 
     }
 }
