@@ -19,9 +19,6 @@ class Questions extends Component {
       .then(res => res.json())
       .then(json => {
         this.setState({ Questions: json });
-        console.log("SUBCATEGORY " + this.props.sub_id + " QUESTIONS");
-        console.log(this.state.Questions);
-        console.log("QUESTIONS END");
       });
   }
 

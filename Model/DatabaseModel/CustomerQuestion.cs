@@ -16,7 +16,11 @@ namespace FAQApi.Model.DatabaseModel
     {
         [Key]
         public int cq_id { get; set; }
+        [EmailAddress]
+        [Required]
         public string customer_email { get; set; }
+        [StringLength(512, MinimumLength = 10)]
+        [Required]
         public string question_text { get; set; }
 
        

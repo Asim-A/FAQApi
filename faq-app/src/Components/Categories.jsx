@@ -33,9 +33,6 @@ class Categories extends Component {
       .then(res => res.json())
       .then(json => {
         this.setState({ category: json });
-        console.log("CATEGORY:");
-        console.log(this.state.category);
-        console.log("CATEGORY END");
       });
   };
 

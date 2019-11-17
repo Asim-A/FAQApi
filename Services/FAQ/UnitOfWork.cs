@@ -14,12 +14,15 @@ namespace FAQApi.Services.FAQ
         public ISubcategoryRepository Subcategories { get; private set; }
         public IQuestionRepository Questions { get; private set; }
 
+        public ICustomerQuestionRepository CustomerQuestion { get; private set; }
+
         public UnitOfWork(FAQContext context)
         {
             _context = context;
             Categories = new CategoryRepository(_context);
             Subcategories = new SubcategoryRepository(_context);
             Questions = new QuestionRepository(_context);
+            CustomerQuestion = new CustomerQuestionRepository(_context);
         }
 
 

@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from "react";
 import Card from "react-bootstrap/Card";
 
-import { Link, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class CategoryCard extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   createCard = () => {
     let id = this.props.category_id;
