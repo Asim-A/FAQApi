@@ -50,13 +50,31 @@ class ContactForm extends Component {
     this.setState({ [event.target.name]: event.target.value });
   };
 
+  getData = () => {
+    return {
+      customer_email: this.state.email,
+      question_text: this.state.question
+    };
+  };
+
   handleSubmit = event => {
     event.preventDefault();
 
     const isValid = this.validate();
 
     if (isValid) {
-      this.setState(initialState);
+      fetch("/v1/faq/CustomerQuestions", {
+        method: "POST",
+        body: JSON.stringify(this.getData()),
+        headers: new Headers({ "content-type": "application/json" })
+      }).then(res => {
+        if (res.status === 201) {
+          this.setState(initialState);
+          alert("SUKSESS!"); // måtte ha en måte å vise at det funket på, veldig stygt, men funker
+        } else {
+          alert("FUNKER IKKE!");
+        }
+      });
     }
   };
 
@@ -102,7 +120,7 @@ class ContactForm extends Component {
                 </div>
               </div>
 
-              <input className="btn btn-primary" type="submit" value="Submit" />
+              <input className="btn btn-primary" type="submit" value="Send" />
             </form>
           </div>
         </div>

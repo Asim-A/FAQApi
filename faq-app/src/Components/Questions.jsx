@@ -12,10 +12,7 @@ class Questions extends Component {
   }
 
   componentDidMount() {
-    fetch(
-      "https://localhost:44382/v1/faq/questions/bySubcategory?id=" +
-        this.props.sub_id
-    )
+    fetch("v1/faq/questions/bySubcategory?id=" + this.props.sub_id)
       .then(res => res.json())
       .then(json => {
         this.setState({ Questions: json });
@@ -26,7 +23,7 @@ class Questions extends Component {
     return (
       <div className="question-wrapper">
         {Questions.map(question => (
-          <div className="question">
+          <div key={question.question_id} className="question">
             <div className="upvote">
               <Chevron
                 className="chev rotateleft"

@@ -20,6 +20,8 @@ Et rating system er laget, og api-kall (request) til /v1/faq/questions/{id} + qu
 
 UnitOfWork har en dispose metode, jeg leste at å bruke using er tregere enn å dispose ressursen når den er ferdig. Jeg gjorde 100000 iterasjoner på mitt nest største objekt for å teste påstanden. I løsningen er to png filer av sammenlignelse mellom using og dispose på 1000 iterasjoner. Der var dispose 15% raskere. 
 
+Validering av CustomerQuestion objektet skjer både frontend og backend. Hvis noen poster en ugyldig request vil de få 400 bad request response med melding om hva som er feil. Feilen er ikke displayet frontend fordi frontend validation forsørger at det ikke burde hende. Men hvis du bruker postman eller lignende vil du få meldingen.
+
 Hvis du har postman, curl, browser devtool eller lignende og vil teste api-et så anbefaler jeg disse kallene:
 
 Henter alle kategori uten underkategorier:
@@ -40,8 +42,19 @@ GET: /v1/faq/question/{id}
 Endrer rad til den id-en. Man må legge til body i put-requesten. 
 PUT: /v1/faq/question/id
 
+Må ha body med riktig objekt, legger ting i CustomerQuestion tabellen.
+POST: /v1/faq/CustomerQuestions
+
 Frontend:
 
-Her valgte jeg å bruke React og bootstrap. Frontend prosjektet ligger i faq-app mappen. Jeg har laget aktuelle komponenter for å strukturere data som man får gjennom api-et. 
+Her valgte jeg å bruke React og bootstrap. Frontend prosjektet ligger i faq-app mappen. Jeg har laget aktuelle komponenter for å strukturere data som man får gjennom api-et. Styling er litt begrenset, men i hovedsak så burde alt være leselig og responsivt takket være bootstrap 4. 
 
+Startsiden (/) vil ha kort med alle kategoriene. Når man trykker på en av kategoriene kommer man inn til en side som viser alle underkategoriene innen den kategorien. Deretter vil hver underkategori ha en liste av accordions, som vil inneholde spørsmålet, svaret (trykk) og hvor populært det er (synkende, mest populær først). Det går ikke an å endre verdien på likes frontend, men hvis du gjør et api-kall kan det bli endret. 
 
+Alle kategorier kan lenke til ContactForm komponenten der man kan sende inn spørsmål. 
+
+Jeg innser at frontend krever endel styling, men jeg mener det er stortsett funksjonelt.
+
+Ting som mangles:
+1. Alternativ måte å sortere spørsmål, bare etter mest populært (frontend).
+2. Binde opp og ned knappene til å gjøre api-kall på put metoden i questionscontroller

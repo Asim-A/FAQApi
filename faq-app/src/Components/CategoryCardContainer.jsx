@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import CategoryCard from "./CategoryCard";
 import "../Category.css";
 
@@ -14,6 +14,14 @@ class CategoryCardContainer extends Component {
   categoryWrapper = cats => {
     return (
       <div className="d-flex category-wrapper">
+        <div style={{ width: "80%" }}>
+          <h1>Spørsmål og svar</h1>
+          <h4>
+            Noe du lurer på? Velg tema og finn svar på alt fra hvem som kan få
+            rabatt og hvordan du søker om refusjon, til hvordan appen fungerer
+            og hva slags bagasje du kan ta med.
+          </h4>
+        </div>
         {cats.map(category => (
           <CategoryCard
             key={category.category_id}
@@ -41,7 +49,7 @@ class CategoryCardContainer extends Component {
 
     let cats = this.state.categories;
 
-    return this.categoryWrapper(cats);
+    return <Fragment>{this.categoryWrapper(cats)}</Fragment>;
   }
 }
 

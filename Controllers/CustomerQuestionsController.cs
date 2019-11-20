@@ -44,17 +44,8 @@ namespace FAQApi.Controllers
         public IActionResult Post([FromBody] CustomerQuestion newQuestion)
         {     
             
-            for(int i = 0; i < 10; i++)
-            {
-                Debug.WriteLine("POST KJØRER!");
-            }
-
             if (ModelState.IsValid)
             {
-                for (int i = 0; i < 10; i++)
-                {
-                    Debug.WriteLine("GODKJENT!");
-                }
                 UnitOfWork unit = new UnitOfWork(context);
 
                 unit.CustomerQuestion.Add(newQuestion);
@@ -62,11 +53,6 @@ namespace FAQApi.Controllers
 
                 unit.Dispose();
                 return StatusCode(201);
-            }
-
-            for (int i = 0; i < 10; i++)
-            {
-                Debug.WriteLine("IKKEGODKJENT!");
             }
 
             return StatusCode(400);

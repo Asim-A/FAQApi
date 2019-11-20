@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Subcategory from "./Subcategory";
 import "../Categories.css";
+import { Link } from "react-router-dom";
 
 class Categories extends Component {
   constructor(props) {
@@ -27,9 +28,8 @@ class Categories extends Component {
 
   componentDidMount = () => {
     let id = this.props.match.params.id;
-    console.log("id:" + id);
 
-    fetch("https://localhost:44382/v1/faq/categories/" + id)
+    fetch("/v1/faq/categories/" + id)
       .then(res => res.json())
       .then(json => {
         this.setState({ category: json });
@@ -39,7 +39,7 @@ class Categories extends Component {
   render() {
     let myObj = this.state.category;
 
-    if (myObj.length === 0) return <h1></h1>;
+    if (myObj.length === 0) return <h1>LASTER</h1>;
 
     //vet hvis myObj ikke er tom så er det akkurat 1 subcat, mtp. backend.
     let category = myObj[0];
@@ -51,9 +51,9 @@ class Categories extends Component {
         <h1>{category.category_title}</h1>
         <h4 className="cathead">{category.category_body}</h4>
 
-        <button className="btn btn-info">
+        <Link to="/nytt-spørsmål">
           Hvis du ikke finne svar på spørsmålet ditt kan du kontakte oss her
-        </button>
+        </Link>
 
         {this.createSubcategories(subcategories)}
       </div>
