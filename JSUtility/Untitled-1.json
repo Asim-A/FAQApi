@@ -1,0 +1,112 @@
+[
+  {
+    "subcategory_title": "Vy-appen",
+    "Questions": [
+      {
+        "question_body": "Hvordan laster jeg ned appen?",
+        "answer": "<p>Du kan laste ned appen fra <a title=\"App Store\" href=\"https://apps.apple.com/no/app/vy-nsb/id439655098\" target=\"_blank\" rel=\"noopener\">App Store</a> (iOS) eller <a title=\"Google Play\" href=\"https://play.google.com/store/apps/details?id=com.intele.nsbmob.app\" target=\"_blank\" rel=\"noopener\">Google Play</a> (Android).</p>"
+      },
+      {
+        "question_body": "Hva kan jeg gjøre i appen?",
+        "answer": "<ul>\n<li>Kjøpe togbilletter og periodebilletter</li>\n<li>Sjekke togtider</li>\n<li>Få varsel om endringer eller avvik som påvirker avgangen din</li>\n<li>Få oppdatert reiseinformasjon</li>\n<li>Lagre favorittstrekninger</li>\n<li>Fornye periodebilletten</li>\n<li>Kjøpe Ruter tilleggsbillett</li>\n<li>Bruke mobilen som billettbærer</li>\n<li>Få varsel før periodebilletten utløper</li>\n<li>Betale med kort eller Vipps</li>\n</ul>"
+      },
+      {
+        "question_body": "Kan jeg kjøpe billett for Ruter, Kolumbus og Skyss?",
+        "answer": "<p>Du kan kjøpe periodebillett for Ruter, Kolumbus og Skyss og enkeltbillett for Ruter.</p>"
+      },
+      {
+        "question_body": "Hvordan betaler jeg?",
+        "answer": "<p>Du kan betale med kredittkort eller Vipps.</p>"
+      },
+      {
+        "question_body": "Jeg har slettet appen og billetten(e) er borte. Hva gjør jeg?",
+        "answer": "<p>Da må du kontakte kundeservice eller en betjent stasjon slik at vi kan tilbakestille billetten din. Har du periodebillett kan du overføre denne selv ved å laste ned en erstatningsbillett etter å ha installert appen på nytt. Enkeltbilletter kan du også laste ned på nytt frem til dagen før avreise.</p>"
+      },
+      {
+        "question_body": "Jeg har byttet telefon. Hvorfor må jeg betale for en erstatningsbillett?",
+        "answer": "<p>Mistet/tapt periodebillett kan erstattes med ny billett hvis det kan bekreftes at gyldig billett er utstedt. Ved overføring av billett til ny enhet lages en erstatningsbillett.</p>\n<ul>\n<li>For enkeltbilletter: Du kan selv overføre din enkeltbillett til ny telefon inntil dagen før avreise.</li>\n<li>For periodebilletter: Du kan selv overføre periodebilletten gratis til ny enhet to ganger per billett. Fra og med tredje gang må du betale et erstatningsgebyr på 100 kr. Årsbilletter kan overføres inntil seks ganger gratis.</li>\n</ul>\n<p>&nbsp;</p>"
+      },
+      {
+        "question_body": "Kan jeg kjøpe periodebillett på vy.no og laste den ned i appen?",
+        "answer": "<p>Nei, periodebilletter kjøpt på vy.no må lastes ned på et reisekort via en kortleser eller billettautomat. Dette gjelder også hvis du fornyer periodebilletten via din profil.</p>\n<p>Det er viktig å merke seg at du ikke kan ha samme periodebillett på flere enheter. Har du kjøpt billetten din til reisekortet, kan den ikke overføres til mobilen, eller omvendt.</p>\n<p>Ønsker du å ha periodebilletten din i appen, må du kjøpe den i appen. </p>"
+      },
+      {
+        "question_body": "Hva er fordelen med å ha periodebillett i appen?",
+        "answer": "<ul>\n<li>Du kan kjøpe alle periodebilletter i appen. I tillegg er det mulig å få kjøpt rabatterte overgangsbilletter til ulike takstområder som Ruter, Brakar, Østfold og VKT.</li>\n<li>Du kan sette opp pushvarsling på din strekning.</li>\n<li>Du får tilgang til Vy Underholdning med lydbøker og aviser.</li>\n<li>Du har større kontroll ved at du selv bestemmer når periodebilletten skal gjelde fra (for eksempel mandag morgen kl. 07:00).</li>\n<li>Du er ikke avhengig av å måtte gå innom en kortleser eller billettautomat for å aktivere billetten. Det gjør du selv.</li>\n</ul>"
+      },
+      {
+        "question_body": "Hvorfor vises ikke billetten i appen?",
+        "answer": "<p>Trykk på «Billett» og dra fra toppen for å oppdatere billettvisningen din.</p>\n<p>Dersom billetten fortsatt ikke dukker opp, kan du ta kontakt med kundeservice.</p>\n<p>Dersom du finner billetten, men ikke får opp noen QR-kode, kan det skyldes at reisen ikke finner sted i dag. QR-kode på enkeltbilletter vil kun være synlig fra og med reisedato. </p>"
+      },
+      {
+        "question_body": "Hvordan laster jeg ned billettkjøp fra vy.no i appen?",
+        "answer": "<p>Har du kjøpt billetter på vy.no uten å være logget inn har du mulighet til å hente ut billetten din i appen ved å bruke referansekoden som ligger i e-postkvitteringen.</p>\n<p>Har du kjøpt billetten på vy.no og vært innlogget i din profil, kan du etter kjøpet velge å sende billetten til din telefon. Dette fungerer kun dersom du fra før har installert appen og har logget inn med samme Vy-profil i appen.</p>"
+      },
+      {
+        "question_body": "Hva er pushvarsling og hvordan aktiverer jeg dette?",
+        "answer": "<p>Pushvarsling er en funksjonalitet i appen som gjør at du automatisk får beskjed dersom det er endringer eller avvik som påvirker avgangen på reisen din.</p>\n<p>Har du periodebillett aktiverer du pushvarsling under «Favoritter». Har du kjøpt en enkeltbillett aktiveres pushvarsling automatisk for reisen.</p>"
+      },
+      {
+        "question_body": "Hvorfor får ikke jeg aktivert pushvarsling?",
+        "answer": "<p>For å kunne aktivere pushvarsling i appen må du ha en gyldig periodebillett i appen.</p>\n<p>Dersom du har billetten din på et reisekort eller i appene til Ruter/Kolumbus/Skyss eller andre selskaper, vil du per i dag ikke kunne sette opp pushvarsling i Vy-appen. Om du ønsker pushvarsling fra Vy, anbefaler vi deg å kjøpe billett i Vy-appen neste gang. </p>"
+      },
+      {
+        "question_body": "Hvorfor får jeg ikke mer informasjon når jeg klikker på pushmeldingen?",
+        "answer": "<p>Pushvarsling er fremdeles under utvikling. Vi jobber med å gi utvidet informasjon når du klikker på meldingen. </p>"
+      },
+      {
+        "question_body": "Kan jeg få refundert mobilbilletten?",
+        "answer": "<p>Ja, alle ordinære billetter kan refunderes i appen. Refusjonsbetingelsene for billetten din står på selve billetten. <a title=\"refusjonsbetingelser\" href=\"/vilkar-og-personvern/avbestilling\" target=\"_top\">Les mer om våre refusjonsbetingelser</a>.</p>"
+      },
+      {
+        "question_body": "Hvilket ansvar har jeg som kunde?",
+        "answer": "<ul>\n<li>Du må ha gyldig billett før du går om bord.</li>\n<li>Skjermen må være leselig og du må ha nok batteri på telefonen/nettbrettet under hele reisen</li>\n<li>Dersom du har kjøpt billett til andre med din mobil, er det du som disponerer billettene. Mobilen din må derfor være tilgjengelig for reisefølget ditt ved kontroll.</li>\n</ul>"
+      },
+      {
+        "question_body": "Jeg har byttet passord, men opplever problemer med å kjøpe billett. Hva gjør jeg?",
+        "answer": "<p>Dersom du har byttet passord og har problemer med kjøp, bør du logge inn og ut av appen. Dette kan du gjøre under «Profil»-fanen.</p>"
+      }
+    ]
+  },
+  {
+    "subcategory_title": "Underholdningsappen",
+    "Questions": [
+      {
+        "question_body": "Hvordan laster jeg ned Underholdningsappen?",
+        "answer": "<p>Du kan laste den ned i <a title=\"App Store\" href=\"https://apps.apple.com/no/app/vy-underholdning/id845142076\" target=\"_blank\" rel=\"noopener\">App Store</a> (iOS) eller <a title=\"Google Play\" href=\"https://play.google.com/store/apps/details?id=no.shortcut.nsb_pluss\" target=\"_blank\" rel=\"noopener\">Google Play</a> (Android).</p>"
+      },
+      {
+        "question_body": "Kan jeg laste ned appen uten å ha en billett?",
+        "answer": "<p>Ja, alle kan laste ned appen. For å få tilgang til lydbøker og aviser må du ha gyldig billett kjøpt på Vy-profilen din enten via vy.no eller i Vy-appen.</p>"
+      },
+      {
+        "question_body": "Hvorfor får jeg melding om «ikke gyldig billett» selv om jeg har periodebillett?",
+        "answer": "<p>Enkelte kunder som har periodebillett på reisekort kan oppleve å få melding i underholdningsappen om «ikke gyldig billett» ved nedlasting av aviser og lydbøker, selv om billetten er aktivert på reisekortet. Vi har dessverre ingen umiddelbar løsning på dette problemet, men har du anledning anbefaler vi deg å kjøpe billettene dine i Vy-appen for å få tilgang til aviser og lydbøker.</p>"
+      },
+      {
+        "question_body": "Hvordan får jeg flyttet over appen til minnekort på Android?",
+        "answer": "<p>Åpne innstillinger og bla deg ned til applikasjoner og velg appen Vy Underholdning. For å flytte over appen til minnekortet velger du knappen «flytt til SD-kort». Da vil appen med ditt innhold bli flyttet over til minnekortet. Husk at appen forsvinner hvis du tar ut minnekortet fra mobilen.</p>"
+      },
+      {
+        "question_body": "Hvilken versjon av Android og iOS må jeg ha på mobilen?",
+        "answer": "<p>For Android støttes OS versjon 4.0 og senere, for iOS støttes iOS versjon 7.0 og senere.</p>"
+      },
+      {
+        "question_body": "Hvor lang tid tar nedlastning av lydbøkene?",
+        "answer": "<p>Det kan ta inntil fem minutter å laste ned en bok, avhengig av hvor du er og hvilken nettilgang du har. Generelt sett går det raskest når du er på trådløst nett og vi anbefaler at du laster ned boken før du går på toget, for eksempel når du er hjemme eller på jobben. Trådløst nett om bord på tog baserer seg på mobilnettet og kan ikke bli bedre enn nettilgangen i området toget kjører. Dette nettet er heller ikke dimensjonert for nedlasting av større filer. 3G og 4G går også bra om du har god dekning.</p>"
+      },
+      {
+        "question_body": "Hvor store er lydbokfilene/hvor stor plass tar de på mobilen?",
+        "answer": "<p>En bok er ganske komprimert og er cirka 100-200 MB. Det vil si at de ikke tar spesielt stor plass på mobilen din. Appen i seg selv tar også liten plass, cirka 20 MB.</p>"
+      },
+      {
+        "question_body": "Hvordan jobber Vy med å forbedre nettdekning på stasjoner og tog?",
+        "answer": "<p>Alle våre regiontog har trådløst internett om bord. Etter hvert som Bane NOR sikrer mobil- og bredbånddekning i tunneler og andre utilgjengelige områder rundt om i Norge, blir også kvaliteten på mobilt internett bedre. På deler av noen strekninger vil det likevel fortsatt være ustabil dekning. Dette skyldes at dekningen for mobildata er dårlig eller manglende i området toget kjører. Vi anbefaler deg da å prøve igjen litt senere.</p>"
+      },
+      {
+        "question_body": "Hva skjer med boken når 100 dager er gått og jeg ikke har hørt ferdig?",
+        "answer": "<p>Lydboken vil slettes fra appen din etter 100 dager. Dette har å gjøre med avtalen vi har med innholdspartnerne våre. Dersom du ønsker lydboken etter dette må du kjøpe den selv.</p>"
+      }
+    ]
+  }
+]
